@@ -1,0 +1,39 @@
+body{overflow:hidden;}
+img{position:absolute; width:100%; height:100%; z-index:2; transition:all 1s;}
+.list{position:absolute; top:80%; left:50%; color:#FFF; transform:translate(-50%,-50%); z-index:3;}
+
+.list li{width:120px;float:left; text-align:center; margin-right:10px;}
+.list span{border:#FFF 2px solid; border-radius:5px; padding-top:50px; display:inline-block;}
+.list img{width:90px; height:90px; border-radius:50%; position:relative; top:40px; border:#FFF 3px solid;}
+.list img:hover{transform: scale(0.8); opacity:0.5;}
+.list .one,.list .three,.list .four{width:120px; height:40px;}
+.list .two,.list .five{width:110px; height:60px; }
+
+.list .one{background:#02646f;}
+.list .two{background:#eb0836;}
+.list .three{background:#67b373;}
+.list .four{background:#e7674a;}
+.list .five{background:#e51060;}
+
+
+#img1:target{transform: scale(1.2); z-index:3;}
+#img2:target{transform:rotateY(180deg);  z-index:3; }
+#img3:target{z-index:3; animation:name 3s ease 0.1s;}
+#img4:target{transform:skew(180deg); z-index:3;}
+#img5:target{transform: rotate(360deg); z-index:3;}
+
+@keyframes name{
+	10%{
+		transform:translateX(180px);
+		opacity:0.3;
+	}
+	50%{
+		transform:translate(0px,180px);
+		opacity:0.5;
+	}
+	
+	100%{
+		transform:translate(0px,0px);
+		opacity:0.9;
+	}			
+}
